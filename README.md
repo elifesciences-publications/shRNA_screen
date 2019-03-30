@@ -5,7 +5,7 @@ This file provides the markdown representation for the analysis notebook (primar
 A few additional notes:
 - Where appropriate, a parenthetical is included in the section heading to denote panel(s) to which said section pertains.
 - Note that running the permutations may yield values slightly different from the manuscript.
-- The below path strings do make the assumption you are on a *nix system (i.e. Linux or Mac). If you are on a Windows machine, replacing the "/" in path names with "\" should fix any problems you encounter.
+- The below path strings do make the assumption you are on a *nix system (i.e. Linux or Mac). If you are on a Windows machine, replacing the "/" in path names with "\\" should fix any problems you encounter.
 
 # Setup
 
