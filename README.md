@@ -1290,7 +1290,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_30_0.png)
+![png](ref/README-images/output_30_0.png)
 
 
 ## Size of SNP LD Blocks, distributions (1-S1B)
@@ -1343,7 +1343,7 @@ ax.tick_params(
 
 
 
-![png](output_33_1.png)
+![png](ref/README-images/output_33_1.png)
 
 
 ## Genes per Loci (1-S1C)
@@ -1394,7 +1394,7 @@ ax.text(18, 10, 'median = ' + str(int(np.median(genesPerLoci))), fontsize=12, fo
 
 
 
-![png](output_35_1.png)
+![png](ref/README-images/output_35_1.png)
 
 
 ## Number of hairpins per gene (1-S3)
@@ -1436,7 +1436,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_38_0.png)
+![png](ref/README-images/output_38_0.png)
 
 
 ## Log2 fold counts across screen at d0 (2A)
@@ -1494,7 +1494,7 @@ plt.tight_layout(True)
 
 
 
-![png](output_40_1.png)
+![png](ref/README-images/output_40_1.png)
 
 
 ## Fold change plots D4 - DX (2B, 2-S1)
@@ -1573,7 +1573,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_45_0.png)
+![png](ref/README-images/output_45_0.png)
 
 
 
@@ -1659,19 +1659,19 @@ for day in ['d6', 'd9', 'd12', 'd14']:
 ```
 
 
-![png](output_48_0.png)
+![png](ref/README-images/output_48_0.png)
 
 
 
-![png](output_48_1.png)
+![png](ref/README-images/output_48_1.png)
 
 
 
-![png](output_48_2.png)
+![png](ref/README-images/output_48_2.png)
 
 
 
-![png](output_48_3.png)
+![png](ref/README-images/output_48_3.png)
 
 
 ## Replicate Correlation (2-S2)
@@ -1901,7 +1901,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_54_0.png)
+![png](ref/README-images/output_54_0.png)
 
 
 ***Pheno1, Pheno3***
@@ -1936,7 +1936,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_56_0.png)
+![png](ref/README-images/output_56_0.png)
 
 
 ***Pheno2, Pheno3***
@@ -1971,7 +1971,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_58_0.png)
+![png](ref/README-images/output_58_0.png)
 
 
 ## +/- Examples (2D)
@@ -2059,7 +2059,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_64_0.png)
+![png](ref/README-images/output_64_0.png)
 
 
 ## Log2 FC Comparison by Type (2C, 2E)
@@ -2118,7 +2118,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_68_0.png)
+![png](ref/README-images/output_68_0.png)
 
 
 
@@ -2164,7 +2164,7 @@ for gene in genes:
 ```
 
 
-![png](output_69_0.png)
+![png](ref/README-images/output_69_0.png)
 
 
 # Linear Mixed Model (LMM)
@@ -2601,7 +2601,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_87_0.png)
+![png](ref/README-images/output_87_0.png)
 
 
 
@@ -2675,7 +2675,7 @@ ax.text(7, 7.5, 'median = ' + str(int(np.median([sum(x[1:]) for x in forPlot])))
 
 
 
-![png](output_90_1.png)
+![png](ref/README-images/output_90_1.png)
 
 
 ## Correlation of beta value and original GWAS effect size
@@ -2900,7 +2900,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_98_0.png)
+![png](ref/README-images/output_98_0.png)
 
 
 ## Essentiality enrichment (3B, 3-S2A-D)
@@ -3102,7 +3102,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_105_0.png)
+![png](ref/README-images/output_105_0.png)
 
 
 
@@ -3171,7 +3171,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_106_0.png)
+![png](ref/README-images/output_106_0.png)
 
 
 
@@ -3252,7 +3252,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_107_0.png)
+![png](ref/README-images/output_107_0.png)
 
 
 
@@ -3333,7 +3333,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_108_0.png)
+![png](ref/README-images/output_108_0.png)
 
 
 
@@ -3414,7 +3414,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_109_0.png)
+![png](ref/README-images/output_109_0.png)
 
 
 ## Gold Standard Rank Sum Permutation (3C)
@@ -3497,7 +3497,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](output_113_0.png)
+![png](ref/README-images/output_113_0.png)
 
 
 ## Hits per Trait (3-S1B)
@@ -3565,7 +3565,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](output_118_0.png)
+![png](ref/README-images/output_118_0.png)
 
 
 # Cell Type Expression Enrichment Heat Map (3E, 3-S3)
@@ -4745,7 +4745,7 @@ g = sns.clustermap(indf[[x for x in indf.columns[1:]]].values, cmap=C, row_clust
 ```
 
 
-![png](output_130_0.png)
+![png](ref/README-images/output_130_0.png)
 
 
 
@@ -4780,7 +4780,7 @@ gfig
 
 
 
-![png](output_131_0.png)
+![png](ref/README-images/output_131_0.png)
 
 
 
@@ -4870,7 +4870,7 @@ for ax in axes:
 
 
 
-![png](output_136_1.png)
+![png](ref/README-images/output_136_1.png)
 
 
 
@@ -5610,7 +5610,7 @@ plt.tight_layout()
 ```
 
 
-![png](output_149_0.png)
+![png](ref/README-images/output_149_0.png)
 
 
 # Patient Hb Analysis (6-S2F)
@@ -5849,5 +5849,5 @@ ax.plot([1, 2, 3], statsLM([1, 2, 3]), color='black', alpha=0.8)
 
 
 
-![png](output_159_1.png)
+![png](ref/README-images/output_159_1.png)
 
