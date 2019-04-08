@@ -1249,7 +1249,7 @@ print('gwa', shref[shref['gene'].isin(annoref[annoref['anno'] == 'gwa']['gene'].
     neg 150
 
 
-## Number of loci per trait (S1A)
+## Number of loci per trait (1-S1A)
 
 
 ```python
@@ -1290,10 +1290,10 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_30_0.png)
+![png](output_30_0.png)
 
 
-## Size of SNP LD Blocks, distributions (S1B)
+## Size of SNP LD Blocks, distributions (1-S1B)
 
 
 ```python
@@ -1343,10 +1343,10 @@ ax.tick_params(
 
 
 
-![png](ref/README-images/output_33_1.png)
+![png](output_33_1.png)
 
 
-## Genes per Loci (S1C)
+## Genes per Loci (1-S1C)
 
 
 ```python
@@ -1394,10 +1394,10 @@ ax.text(18, 10, 'median = ' + str(int(np.median(genesPerLoci))), fontsize=12, fo
 
 
 
-![png](ref/README-images/output_35_1.png)
+![png](output_35_1.png)
 
 
-## Number of hairpins per gene (S1D)
+## Number of hairpins per gene (1-S3)
 
 
 ```python
@@ -1436,7 +1436,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_38_0.png)
+![png](output_38_0.png)
 
 
 ## Log2 fold counts across screen at d0 (2A)
@@ -1494,10 +1494,10 @@ plt.tight_layout(True)
 
 
 
-![png](ref/README-images/output_40_1.png)
+![png](output_40_1.png)
 
 
-## Fold change plots D4 - DX (2B, S2A)
+## Fold change plots D4 - DX (2B, 2-S1)
 
 
 ```python
@@ -1659,22 +1659,22 @@ for day in ['d6', 'd9', 'd12', 'd14']:
 ```
 
 
-![png](ref/README-images/output_48_0.png)
+![png](output_48_0.png)
 
 
 
-![png](ref/README-images/output_48_1.png)
+![png](output_48_1.png)
 
 
 
-![png](ref/README-images/output_48_2.png)
+![png](output_48_2.png)
 
 
 
-![png](ref/README-images/output_48_3.png)
+![png](output_48_3.png)
 
 
-## Replicate Correlation (S2B)
+## Replicate Correlation (2-S2)
 
 
 ```python
@@ -1901,7 +1901,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_54_0.png)
+![png](output_54_0.png)
 
 
 ***Pheno1, Pheno3***
@@ -1936,7 +1936,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_56_0.png)
+![png](output_56_0.png)
 
 
 ***Pheno2, Pheno3***
@@ -1971,7 +1971,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_58_0.png)
+![png](output_58_0.png)
 
 
 ## +/- Examples (2D)
@@ -2059,10 +2059,10 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_64_0.png)
+![png](output_64_0.png)
 
 
-   ## Log2 FC Comparison by Type (2C, 2E)
+## Log2 FC Comparison by Type (2C, 2E)
 
 
 ```python
@@ -2118,7 +2118,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_68_0.png)
+![png](output_68_0.png)
 
 
 
@@ -2164,7 +2164,7 @@ for gene in genes:
 ```
 
 
-![png](ref/README-images/output_69_0.png)
+![png](output_69_0.png)
 
 
 # Linear Mixed Model (LMM)
@@ -2303,6 +2303,118 @@ modeldf.head()
       <td>0.267592</td>
       <td>gwa</td>
       <td>rs2271294</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+modeldf[modeldf['gene'].isin(shref[shref['snp'] == 'rs2159213']['gene'].unique())]
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gene</th>
+      <th>intercept</th>
+      <th>betaDur</th>
+      <th>pval</th>
+      <th>qval</th>
+      <th>type</th>
+      <th>snp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>15</th>
+      <td>AMH</td>
+      <td>0.032646</td>
+      <td>0.068726</td>
+      <td>0.237781</td>
+      <td>0.238753</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>AP3D1</td>
+      <td>0.032876</td>
+      <td>-0.082098</td>
+      <td>0.086974</td>
+      <td>0.133986</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>DOT1L</td>
+      <td>0.120601</td>
+      <td>0.061021</td>
+      <td>0.073185</td>
+      <td>0.122516</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>161</th>
+      <td>IZUMO4</td>
+      <td>0.400836</td>
+      <td>-0.052894</td>
+      <td>0.297726</td>
+      <td>0.269720</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>187</th>
+      <td>MKNK2</td>
+      <td>0.278652</td>
+      <td>-0.044889</td>
+      <td>0.493044</td>
+      <td>0.362397</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>MOB3A</td>
+      <td>0.012185</td>
+      <td>-0.102658</td>
+      <td>0.130925</td>
+      <td>0.168058</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
+    </tr>
+    <tr>
+      <th>310</th>
+      <td>SF3A2</td>
+      <td>0.151142</td>
+      <td>-0.236992</td>
+      <td>0.000923</td>
+      <td>0.005764</td>
+      <td>gwa</td>
+      <td>rs2159213</td>
     </tr>
   </tbody>
 </table>
@@ -2489,7 +2601,7 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_86_0.png)
+![png](output_87_0.png)
 
 
 
@@ -2514,12 +2626,12 @@ def adjust_spines(ax, spines):
         ax.xaxis.set_ticks([])
 ```
 
-## Hits per Locus Histogram (S3A)
+## Hits per Locus Histogram (3-S1A)
 
 
 ```python
 # Per locus histogram
-fig, ax = plt.subplots(1, dpi=300, figsize=(3.4, 2))
+fig, ax = plt.subplots(1, dpi=300, figsize=(2.4, 2))
 genesPerLoci = []
 
 for snp in annoref['snp'].unique():
@@ -2547,7 +2659,7 @@ for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
     item.set_fontsize(12)
     item.set_fontname('Arial')
 
-ax.set_xticks([x + 0.4 for x in range(0,11)])
+ax.set_xticks([x + 0.4 - 0.09*i for i,x in enumerate(range(0,11))])
 ax.set_xticklabels([str(x) for x in range(0,11)])
 
 plt.tight_layout(True)
@@ -2563,10 +2675,235 @@ ax.text(7, 7.5, 'median = ' + str(int(np.median([sum(x[1:]) for x in forPlot])))
 
 
 
-![png](ref/README-images/output_89_1.png)
+![png](output_90_1.png)
 
 
-## Essentiality enrichment (3B, S3C-F)
+## Correlation of beta value and original GWAS effect size
+
+
+```python
+vdh = pd.read_csv('ref/vanderharst2012.tsv', sep='\t')
+print(vdh.shape)
+vdh.head()
+```
+
+    (75, 7)
+
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sentinel SNP</th>
+      <th>Position (B36)</th>
+      <th>Alleles (EA/OA)</th>
+      <th>EAF</th>
+      <th>Phenotype</th>
+      <th>Effect (SE)</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>rs1175550</td>
+      <td>3681388</td>
+      <td>G/A</td>
+      <td>0.22</td>
+      <td>MCHC</td>
+      <td>0.008 (0.013)</td>
+      <td>8.6 × 10−15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>rs3916164</td>
+      <td>39842526</td>
+      <td>G/A</td>
+      <td>0.71</td>
+      <td>MCH</td>
+      <td>0.008 (0.004)</td>
+      <td>3.1 × 10−10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>rs741959</td>
+      <td>47448820</td>
+      <td>G/A</td>
+      <td>0.57</td>
+      <td>MCV</td>
+      <td>0.157 (0.025)</td>
+      <td>6.0 × 10−10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>rs857684</td>
+      <td>156842353</td>
+      <td>C/T</td>
+      <td>0.74</td>
+      <td>MCHC</td>
+      <td>−0.006 (0.011)</td>
+      <td>3.5 × 10−16</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>rs7529925</td>
+      <td>197273831</td>
+      <td>C/T</td>
+      <td>0.28</td>
+      <td>RBC</td>
+      <td>0.014 (0.002)</td>
+      <td>8.3 × 10−9</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+'−0.014'.find('−')
+```
+
+
+
+
+    0
+
+
+
+
+```python
+betaLookup = modeldf.set_index('gene').to_dict()['betaDur']
+vdhLookup = vdh.set_index('Sentinel SNP').to_dict()['Effect (SE)']
+genesCol = sorted(geneHits)
+snpsCol = [snpLookup[x] for x in genesCol]
+betasCol = [betaLookup[x] for x in genesCol]
+vdhsCol = [vdhLookup[x] for x in snpsCol]
+vdhsCol = [float(x[:x.index(' ')].replace('−', '-')) for x in vdhsCol]
+vdhsAbsCol = [abs(x) for x in vdhsCol]
+
+pearsonr(betasCol, vdhsCol)
+```
+
+
+
+
+    (0.015873504739020015, 0.89101516613102416)
+
+
+
+## Inter-target Hairpin Correlation (3-S1C)
+
+
+```python
+from scipy.stats import spearmanr
+```
+
+
+```python
+tempHits = phenoRaw[phenoRaw['gene'].isin(geneHits)][['id', 'gene'] + [x for x in phenoRaw.columns if 'pheno-' in x]].copy()
+tempNots = phenoRaw[~phenoRaw['gene'].isin(geneHits)][['id', 'gene'] + [x for x in phenoRaw.columns if 'pheno-' in x]].copy()
+
+for day in ['d4', 'd6', 'd9', 'd12', 'd14', 'd16']:
+    tempHits[day] = tempHits[[x for x in tempHits.columns if day in x]].mean(axis=1)
+    for rep in ['r1', 'r2', 'r3']:
+        del(tempHits['pheno-' + rep + day])
+        
+for day in ['d4', 'd6', 'd9', 'd12', 'd14', 'd16']:
+    tempNots[day] = tempNots[[x for x in tempNots.columns if day in x]].mean(axis=1)
+    for rep in ['r1', 'r2', 'r3']:
+        del(tempNots['pheno-' + rep + day])
+        
+tempHits['mean'] = tempHits[tempHits.columns[2:]].mean(axis=1)
+tempNots['mean'] = tempNots[tempNots.columns[2:]].mean(axis=1)
+tempHits = tempHits[tempHits['mean'] > 0]
+tempNots = tempNots[tempNots['mean'] > 0]
+
+del(tempHits['mean'])
+del(tempNots['mean'])
+        
+hitCorrs = []
+notCorrs = []
+
+for gene in phenoRaw['gene'].values:
+    if gene in tempHits['gene'].values:
+        subdf = tempHits[tempHits['gene'] == gene].copy()
+        for i,sid1 in enumerate(subdf['id'].values):
+            for sid2 in subdf['id'].values[i+1:]:
+                if sid1 == sid2:
+                    pass
+                else:
+                    hitCorrs.append(pearsonr(subdf[subdf['id'] == sid1][subdf.columns[2:]].values[0],
+                                   subdf[subdf['id'] == sid2][[x for x in subdf.columns[2:]]].values[0])[0])   
+    else:
+        subdf = tempNots[tempNots['gene'] == gene].copy()
+        for i,sid1 in enumerate(subdf['id'].values):
+            for sid2 in subdf['id'].values[i+1:]:
+                if sid1 == sid2:
+                    pass
+                else:
+                    notCorrs.append(pearsonr(subdf[subdf['id'] == sid1][[x for x in subdf.columns[2:]]].values[0],
+                                   subdf[subdf['id'] == sid2][ subdf.columns[2:]].values[0])[0])  
+```
+
+
+```python
+fig, ax = plt.subplots(1, dpi=500, figsize=(2.4,2))
+
+plotdf = pd.DataFrame()
+plotdf['plotCol'] = hitCorrs
+
+ax.hist(plotdf['plotCol'].values, label='Among Hits', alpha=0.4, bins=20, density=True)
+
+plotdf = pd.DataFrame()
+plotdf['plotCol'] = notCorrs
+
+ax.hist(plotdf['plotCol'].values, label='Among non-hits', alpha=0.4, bins=20, density=True)
+
+#ax.set_ylabel('Probability Density')
+ax.set_xlabel('shRNA Pearson Correlation')
+
+adjust_spines(ax, ['bottom'])
+
+for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
+             ax.get_xticklabels() + ax.get_yticklabels()):
+    item.set_fontsize(12)
+    item.set_fontname('Arial')
+
+ax.xaxis.set_tick_params(width=1)
+ax.yaxis.set_tick_params(width=1)
+
+for axis in ['bottom','left']:
+    ax.spines[axis].set_linewidth(1)
+    
+lgd = ax.legend(ncol=1, frameon=False, fontsize=10, loc='upper left', prop=font, bbox_to_anchor=(0.0,1.4))
+
+plt.tight_layout(False)
+```
+
+
+![png](output_98_0.png)
+
+
+## Essentiality enrichment (3B, 3-S2A-D)
 
 
 ```python
@@ -2765,7 +3102,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_96_0.png)
+![png](output_105_0.png)
 
 
 
@@ -2834,7 +3171,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_97_0.png)
+![png](output_106_0.png)
 
 
 
@@ -2915,7 +3252,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_98_0.png)
+![png](output_107_0.png)
 
 
 
@@ -2996,7 +3333,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_99_0.png)
+![png](output_108_0.png)
 
 
 
@@ -3077,7 +3414,7 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_100_0.png)
+![png](output_109_0.png)
 
 
 ## Gold Standard Rank Sum Permutation (3C)
@@ -3109,7 +3446,7 @@ print(sum(perms <= bench)/10000)
 ```
 
     bench 520.5
-    0.0246
+    0.028
 
 
 
@@ -3160,10 +3497,10 @@ plt.tight_layout(False)
 ```
 
 
-![png](ref/README-images/output_104_0.png)
+![png](output_113_0.png)
 
 
-## Hits per Trait (S3B)
+## Hits per Trait (3-S1B)
 
 
 ```python
@@ -3199,7 +3536,7 @@ for snp in [x[0] for x in forPlot]:
 
 ```python
 # Plotting snp hits per trait
-fig, ax = plt.subplots(1, figsize=(3.4,2),dpi=300)
+fig, ax = plt.subplots(1, figsize=(2.4,2),dpi=300)
 
 adjust_spines(ax, ['bottom', 'left'])
 
@@ -3228,10 +3565,10 @@ plt.tight_layout(True)
 ```
 
 
-![png](ref/README-images/output_109_0.png)
+![png](output_118_0.png)
 
 
-# Cell Type Expression Enrichment Heat Map (3E, S3G)
+# Cell Type Expression Enrichment Heat Map (3E, 3-S3)
 
 
 ```python
@@ -4408,7 +4745,7 @@ g = sns.clustermap(indf[[x for x in indf.columns[1:]]].values, cmap=C, row_clust
 ```
 
 
-![png](ref/README-images/output_121_0.png)
+![png](output_130_0.png)
 
 
 
@@ -4443,7 +4780,7 @@ gfig
 
 
 
-![png](ref/README-images/output_122_0.png)
+![png](output_131_0.png)
 
 
 
@@ -4533,7 +4870,7 @@ for ax in axes:
 
 
 
-![png](ref/README-images/output_127_1.png)
+![png](output_136_1.png)
 
 
 
@@ -4572,193 +4909,193 @@ permdf.sort_values('permp')
       <th>29</th>
       <td>PB-lBaso</td>
       <td>17.288926</td>
-      <td>0.031145</td>
+      <td>0.030966</td>
     </tr>
     <tr>
       <th>27</th>
       <td>PB-Pro</td>
       <td>24.594323</td>
-      <td>0.050231</td>
+      <td>0.050611</td>
     </tr>
     <tr>
       <th>7</th>
       <td>H-CMP</td>
       <td>22.317011</td>
-      <td>0.060959</td>
+      <td>0.060614</td>
     </tr>
     <tr>
       <th>28</th>
       <td>PB-eBaso</td>
       <td>20.342867</td>
-      <td>0.064012</td>
+      <td>0.064188</td>
     </tr>
     <tr>
       <th>20</th>
       <td>CB-eBaso</td>
       <td>23.266579</td>
-      <td>0.067734</td>
+      <td>0.067655</td>
     </tr>
     <tr>
       <th>8</th>
       <td>H-MEP</td>
       <td>31.300310</td>
-      <td>0.074235</td>
+      <td>0.074296</td>
     </tr>
     <tr>
       <th>19</th>
       <td>CB-ProE</td>
       <td>32.336225</td>
-      <td>0.084119</td>
+      <td>0.084391</td>
     </tr>
     <tr>
       <th>21</th>
       <td>CB-lBaso</td>
       <td>12.496047</td>
-      <td>0.109675</td>
+      <td>0.109660</td>
     </tr>
     <tr>
       <th>4</th>
       <td>H-GMP-A</td>
       <td>-10.542757</td>
-      <td>0.236680</td>
+      <td>0.237398</td>
     </tr>
     <tr>
       <th>1</th>
       <td>H-MPP</td>
       <td>24.984652</td>
-      <td>0.246312</td>
+      <td>0.247647</td>
     </tr>
     <tr>
       <th>22</th>
       <td>CB-Poly</td>
       <td>-28.979492</td>
-      <td>0.304903</td>
+      <td>0.305100</td>
     </tr>
     <tr>
       <th>5</th>
       <td>H-GMP-B</td>
       <td>0.672682</td>
-      <td>0.317664</td>
+      <td>0.316406</td>
     </tr>
     <tr>
       <th>13</th>
       <td>H-pDC</td>
       <td>14.666205</td>
-      <td>0.417882</td>
+      <td>0.418348</td>
     </tr>
     <tr>
       <th>14</th>
       <td>H-Mono</td>
       <td>-9.961126</td>
-      <td>0.432793</td>
+      <td>0.432869</td>
     </tr>
     <tr>
       <th>26</th>
       <td>PB-CFUE</td>
       <td>29.741646</td>
-      <td>0.470711</td>
+      <td>0.471229</td>
     </tr>
     <tr>
       <th>18</th>
       <td>CB-CFUE</td>
       <td>22.944928</td>
-      <td>0.476106</td>
+      <td>0.475842</td>
     </tr>
     <tr>
       <th>15</th>
       <td>H-Ery</td>
       <td>-41.938184</td>
-      <td>0.497846</td>
+      <td>0.497184</td>
     </tr>
     <tr>
       <th>6</th>
       <td>H-GMP-C</td>
       <td>-30.929557</td>
-      <td>0.500461</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>H-HSC</td>
-      <td>17.808844</td>
-      <td>0.535943</td>
+      <td>0.501561</td>
     </tr>
     <tr>
       <th>10</th>
       <td>H-CD4</td>
       <td>5.298854</td>
-      <td>0.536649</td>
+      <td>0.536269</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>H-HSC</td>
+      <td>17.808844</td>
+      <td>0.537165</td>
     </tr>
     <tr>
       <th>11</th>
       <td>H-CD8</td>
       <td>3.839816</td>
-      <td>0.559229</td>
+      <td>0.559564</td>
     </tr>
     <tr>
       <th>24</th>
       <td>PB-CD34</td>
       <td>13.324571</td>
-      <td>0.593609</td>
+      <td>0.592931</td>
     </tr>
     <tr>
       <th>30</th>
       <td>PB-Poly</td>
       <td>-51.081728</td>
-      <td>0.745757</td>
+      <td>0.745265</td>
     </tr>
     <tr>
       <th>25</th>
       <td>PB-BFUE</td>
       <td>34.689145</td>
-      <td>0.755109</td>
+      <td>0.754077</td>
     </tr>
     <tr>
       <th>23</th>
       <td>CB-Ortho</td>
       <td>-87.231554</td>
-      <td>0.764012</td>
+      <td>0.764486</td>
     </tr>
     <tr>
       <th>9</th>
       <td>H-NK</td>
       <td>1.552237</td>
-      <td>0.805713</td>
+      <td>0.806245</td>
     </tr>
     <tr>
       <th>3</th>
       <td>H-CLP</td>
       <td>-33.624917</td>
-      <td>0.842824</td>
+      <td>0.842991</td>
     </tr>
     <tr>
       <th>16</th>
       <td>CB-CD34</td>
       <td>10.690517</td>
-      <td>0.848923</td>
+      <td>0.848390</td>
     </tr>
     <tr>
       <th>17</th>
       <td>CB-BFUE</td>
       <td>14.476751</td>
-      <td>0.854763</td>
+      <td>0.854582</td>
     </tr>
     <tr>
       <th>31</th>
       <td>PB-Ortho</td>
       <td>-88.899750</td>
-      <td>0.910074</td>
+      <td>0.909168</td>
     </tr>
     <tr>
       <th>12</th>
       <td>H-B</td>
       <td>-12.165970</td>
-      <td>0.927870</td>
+      <td>0.927905</td>
     </tr>
     <tr>
       <th>2</th>
       <td>H-LMPP</td>
       <td>16.721900</td>
-      <td>0.939197</td>
+      <td>0.939457</td>
     </tr>
   </tbody>
 </table>
@@ -4836,181 +5173,181 @@ permAlldf.sort_values('permp')
       <th>20</th>
       <td>CB-eBaso</td>
       <td>23.266579</td>
-      <td>0.00002</td>
+      <td>0.00004</td>
     </tr>
     <tr>
       <th>21</th>
       <td>CB-lBaso</td>
       <td>12.496047</td>
-      <td>0.00013</td>
+      <td>0.00011</td>
     </tr>
     <tr>
       <th>29</th>
       <td>PB-lBaso</td>
       <td>17.288926</td>
-      <td>0.00031</td>
+      <td>0.00021</td>
     </tr>
     <tr>
       <th>8</th>
       <td>H-MEP</td>
       <td>31.300310</td>
-      <td>0.00038</td>
+      <td>0.00026</td>
     </tr>
     <tr>
       <th>27</th>
       <td>PB-Pro</td>
       <td>24.594323</td>
-      <td>0.00042</td>
+      <td>0.00043</td>
     </tr>
     <tr>
       <th>28</th>
       <td>PB-eBaso</td>
       <td>20.342867</td>
-      <td>0.00064</td>
+      <td>0.00073</td>
     </tr>
     <tr>
       <th>19</th>
       <td>CB-ProE</td>
       <td>32.336225</td>
-      <td>0.00256</td>
+      <td>0.00227</td>
     </tr>
     <tr>
       <th>7</th>
       <td>H-CMP</td>
       <td>22.317011</td>
-      <td>0.00644</td>
+      <td>0.00684</td>
     </tr>
     <tr>
       <th>22</th>
       <td>CB-Poly</td>
       <td>-28.979492</td>
-      <td>0.02195</td>
+      <td>0.02233</td>
     </tr>
     <tr>
       <th>1</th>
       <td>H-MPP</td>
       <td>24.984652</td>
-      <td>0.03643</td>
+      <td>0.03493</td>
     </tr>
     <tr>
       <th>14</th>
       <td>H-Mono</td>
       <td>-9.961126</td>
-      <td>0.11931</td>
+      <td>0.12010</td>
     </tr>
     <tr>
       <th>10</th>
       <td>H-CD4</td>
       <td>5.298854</td>
-      <td>0.12392</td>
+      <td>0.12341</td>
     </tr>
     <tr>
       <th>13</th>
       <td>H-pDC</td>
       <td>14.666205</td>
-      <td>0.13196</td>
+      <td>0.13143</td>
     </tr>
     <tr>
       <th>26</th>
       <td>PB-CFUE</td>
       <td>29.741646</td>
-      <td>0.23879</td>
+      <td>0.23665</td>
     </tr>
     <tr>
       <th>30</th>
       <td>PB-Poly</td>
       <td>-51.081728</td>
-      <td>0.34044</td>
+      <td>0.34244</td>
     </tr>
     <tr>
       <th>0</th>
       <td>H-HSC</td>
       <td>17.808844</td>
-      <td>0.41504</td>
+      <td>0.41598</td>
     </tr>
     <tr>
       <th>11</th>
       <td>H-CD8</td>
       <td>3.839816</td>
-      <td>0.45601</td>
+      <td>0.45702</td>
     </tr>
     <tr>
       <th>23</th>
       <td>CB-Ortho</td>
       <td>-87.231554</td>
-      <td>0.46718</td>
+      <td>0.46209</td>
     </tr>
     <tr>
       <th>15</th>
       <td>H-Ery</td>
       <td>-41.938184</td>
-      <td>0.63660</td>
+      <td>0.63620</td>
     </tr>
     <tr>
       <th>6</th>
       <td>H-GMP-C</td>
       <td>-30.929557</td>
-      <td>0.64338</td>
+      <td>0.64211</td>
     </tr>
     <tr>
       <th>5</th>
       <td>H-GMP-B</td>
       <td>0.672682</td>
-      <td>0.69114</td>
+      <td>0.69077</td>
     </tr>
     <tr>
       <th>18</th>
       <td>CB-CFUE</td>
       <td>22.944928</td>
-      <td>0.70399</td>
+      <td>0.70376</td>
     </tr>
     <tr>
       <th>9</th>
       <td>H-NK</td>
       <td>1.552237</td>
-      <td>0.75246</td>
+      <td>0.75388</td>
     </tr>
     <tr>
       <th>4</th>
       <td>H-GMP-A</td>
       <td>-10.542757</td>
-      <td>0.75442</td>
+      <td>0.75400</td>
     </tr>
     <tr>
       <th>31</th>
       <td>PB-Ortho</td>
       <td>-88.899750</td>
-      <td>0.77215</td>
+      <td>0.77131</td>
     </tr>
     <tr>
       <th>12</th>
       <td>H-B</td>
       <td>-12.165970</td>
-      <td>0.98369</td>
+      <td>0.98283</td>
     </tr>
     <tr>
       <th>24</th>
       <td>PB-CD34</td>
       <td>13.324571</td>
-      <td>0.99411</td>
+      <td>0.99341</td>
     </tr>
     <tr>
       <th>2</th>
       <td>H-LMPP</td>
       <td>16.721900</td>
-      <td>0.99416</td>
+      <td>0.99421</td>
     </tr>
     <tr>
       <th>17</th>
       <td>CB-BFUE</td>
       <td>14.476751</td>
-      <td>0.99952</td>
+      <td>0.99948</td>
     </tr>
     <tr>
       <th>25</th>
       <td>PB-BFUE</td>
       <td>34.689145</td>
-      <td>0.99981</td>
+      <td>0.99979</td>
     </tr>
     <tr>
       <th>16</th>
@@ -5273,10 +5610,10 @@ plt.tight_layout()
 ```
 
 
-![png](ref/README-images/output_140_0.png)
+![png](output_149_0.png)
 
 
-# Patient Hb Analysis (S6H)
+# Patient Hb Analysis (6-S2F)
 
 
 ```python
@@ -5450,8 +5787,8 @@ print(est2.summary())
     Dep. Variable:                      y   R-squared:                       0.023
     Model:                            OLS   Adj. R-squared:                  0.012
     Method:                 Least Squares   F-statistic:                     2.154
-    Date:                Tue, 01 Jan 2019   Prob (F-statistic):              0.146
-    Time:                        11:19:39   Log-Likelihood:                -131.57
+    Date:                Wed, 06 Mar 2019   Prob (F-statistic):              0.146
+    Time:                        18:48:13   Log-Likelihood:                -131.57
     No. Observations:                  94   AIC:                             267.1
     Df Residuals:                      92   BIC:                             272.2
     Df Model:                           1                                         
@@ -5507,10 +5844,10 @@ ax.plot([1, 2, 3], statsLM([1, 2, 3]), color='black', alpha=0.8)
 
 
 
-    [<matplotlib.lines.Line2D at 0x7f08ddf5a710>]
+    [<matplotlib.lines.Line2D at 0x7f86eb9e7e80>]
 
 
 
 
-![png](ref/README-images/output_150_1.png)
+![png](output_159_1.png)
 
